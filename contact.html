@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Abikaavya Xerox</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Grey+Qo&family=Monsieur+La+Doulaise&family=Pacifico&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+    /* Mobile Navbar */
+.side-navbar {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 60%;
+  height: 100%;
+  background-color: #222;
+  color: #fff;
+  z-index: 1000;
+  padding: 20px;
+}
+
+/* Navbar and buttons */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-link a {
+  text-decoration: none;
+  color: #000;
+}
+
+.navbar-menu-toggle {
+  display: none;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+  }
+
+  .navbar-menu-toggle {
+    display: block;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .side-navbar-links p {
+    margin: 15px 0;
+  }
+
+  .side-navbar-link a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <h1>Abikaavya Xerox and Stationery</h1>
+    <div class="navbar-links">
+      <p class="navbar-link"><a href="index.html">Home</a></p>
+      <p class="navbar-link"><a href="collection.html">Collection</a></p>
+      <p class="navbar-link"><a href="contact.html">Contact</a></p>
+    </div>
+    <div class="navbar-menu-toggle" onclick="showNavbar()">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+  </nav>
+
+  <!-- Side Navbar (for mobile) -->
+  <div class="side-navbar" id="sideNavbar">
+    <p style="text-align: right;" onclick="closeNavbar()">
+      <i class="fa-solid fa-xmark"></i>
+    </p>
+    <div class="side-navbar-links">
+      <p class="side-navbar-link"><a href="index.html">Home</a></p>
+      <p class="side-navbar-link"><a href="collection.html">Collection</a></p>
+      <p class="side-navbar-link"><a href="contact.html">Contact</a></p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-box-1">
+        <h2 class="headingText">Abikaavya</h2><br />
+        <p>An exclusive range of notebooks, diaries, as well as diary and pen. With innovative cover designs, each notebook dons a classy look.</p>
+        <div class="footer-icons-container"><br />
+          <i class="fa-brands fa-instagram" style="color:#ffffff;"></i>
+          <i class="fa-brands fa-facebook" style="color:#ffffff;"></i>
+          <i class="fa-brands fa-telegram" style="color:#ffffff;"></i>
+        </div>
+      </div>
+    </div>
+    <br />
+    <p>abikaavyaxerox@gmail.com</p><br />
+    <h4>9940764177</h4>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    function showNavbar() {
+      document.getElementById('sideNavbar').style.display = 'block';
+    }
+
+    function closeNavbar() {
+      document.getElementById('sideNavbar').style.display = 'none';
+    }
+  </script>
+
+</body>
+</html>

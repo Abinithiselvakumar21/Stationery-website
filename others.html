@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abikaavya Xerox - Pencil</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous" />
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+    }
+
+    h1.page-title {
+      text-align: center;
+      background-color: #00bcd4;
+      color: white;
+      padding: 1rem;
+      font-family: 'Pacifico', cursive;
+      margin: 0;
+      
+      
+
+    }
+
+    .gallery-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      padding: 2rem;
+     
+    }
+
+    .gallery-item {
+          width: 20%;
+          height:130%;
+      background-color: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s;
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.02);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 50%;
+      display: block;
+    }
+
+    .product-info {
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .product-info h3 {
+      margin: 0.5rem 0;
+      font-size: 1.1rem;
+      color: #333;
+    }
+
+    .product-info .price {
+      font-size: 1rem;
+      color: #4caf50;
+      font-weight: bold;
+    }
+
+    .add-to-cart {
+      background-color: #ff9800;
+      color: white;
+      border: none;
+      padding: 10px;
+      width: 100%;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 1rem;
+      border-radius: 0 0 8px 8px;
+    }
+
+    .add-to-cart:hover {
+      background-color: #e68900;
+    }
+
+    @media (max-width: 600px) {
+      .gallery-item {
+        width: 100%;
+        max-width: 90%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1 class="page-title">Others</h1>
+
+  <div class="gallery-container">
+    <!-- Example Item -->
+    <div class="gallery-item" data-name="Paper Glip box" data-img="https://png.pngtree.com/thumb_back/fh260/background/20240411/pngtree-large-paper-clips-on-a-white-background-office-supplies-isolate-paper-image_15657411.jpg" data-price="₹50">
+      <img src="https://png.pngtree.com/thumb_back/fh260/background/20240411/pngtree-large-paper-clips-on-a-white-background-office-supplies-isolate-paper-image_15657411.jpg" alt="Pencil 1" style="height: 260px;"/>
+      <div class="product-info">
+        <h3> Paper Glip box</h3>
+        <div class="price">₹50</div>
+      </div>
+      <button class="add-to-cart"><i class="fa fa-cart-plus"></i> Add to Cart</button>
+    </div>
+
+    <div class="gallery-item" data-name="White Tape" data-img="https://s.alicdn.com/@sc04/kf/Hf6e8c9e4e0e849b4b3ae9870d5d25d5fF.jpg_720x720q50.jpg" data-price="₹6">
+      <img src="https://s.alicdn.com/@sc04/kf/Hf6e8c9e4e0e849b4b3ae9870d5d25d5fF.jpg_720x720q50.jpg" alt="Pencil 2" style="height: 260px;"/>
+      <div class="product-info">
+        <h3>White Tape</h3>
+        <div class="price">₹6</div>
+      </div>
+      <button class="add-to-cart"><i class="fa fa-cart-plus"></i> Add to Cart</button>
+    </div>
+
+    <!-- Add more items like the above -->
+    <!-- Example: -->
+    <div class="gallery-item" data-name="Double side tape" data-img="https://5.imimg.com/data5/EB/UL/MY-23920408/bopp-adhesive-tape-500x500.jpg" data-price="₹25">
+      <img src="https://5.imimg.com/data5/EB/UL/MY-23920408/bopp-adhesive-tape-500x500.jpg" alt="Pencil 3" style="height: 260px;"/>
+      <div class="product-info">
+        <h3>Double side tape</h3>
+        <div class="price">₹25</div>
+      </div>
+      <button class="add-to-cart"><i class="fa fa-cart-plus"></i> Add to Cart</button>
+    </div>
+
+    <div class="gallery-item" data-name="Color tape" data-img="https://images-eu.ssl-images-amazon.com/images/I/71MA4chdUtL._AC_UL210_SR210,210_.jpg" data-price="₹7">
+      <img src="https://images-eu.ssl-images-amazon.com/images/I/71MA4chdUtL._AC_UL210_SR210,210_.jpg" alt="Pencil 3" style="height: 260px"/>
+      <div class="product-info">
+        <h3>Color tape</h3>
+        <div class="price">₹7</div>
+      </div>
+      <button class="add-to-cart"><i class="fa fa-cart-plus"></i> Add to Cart</button>
+    </div>
+
+
+    <div class="gallery-item" data-name="Guilter tape" data-img="https://images.meesho.com/images/products/402834610/vq1ui_512.webp" data-price="₹10">
+      <img src="https://images.meesho.com/images/products/402834610/vq1ui_512.webp" alt="Pencil 3" style="height: 260px"/>
+      <div class="product-info">
+        <h3>Guilter tape</h3>
+        <div class="price">₹10</div>
+      </div>
+      <button class="add-to-cart"><i class="fa fa-cart-plus"></i> Add to Cart</button>
+    </div>
+
+    <div class="gallery-item" data-name="Scissor" data-img="https://i.pinimg.com/736x/79/e0/27/79e02708cfe706b53759116024aa6600.jpg" data-price="₹50">
+      <img src="https://i.pinimg.com/736x/79/e0/27/79e02708cfe706b53759116024aa6600.jpg" alt="Pencil 3" style="height: 260px"/>
+      <div class="product-info">
+        <h3>Scissor</h3>
+        <div class="price">₹50</div>
+      </div>
+      <button class="add-to-cart"><i class="fa fa-cart-plus"></i> Add to Cart</button>
+    </div>
+
+    <div class="gallery-item" data-name="Paper Cutter Knife" data-img="https://5.imimg.com/data5/SELLER/Default/2020/9/HJ/TA/OK/80990451/p-9.jpg" data-price="₹30">
+      <img src="https://5.imimg.com/data5/SELLER/Default/2020/9/HJ/TA/OK/80990451/p-9.jpg" alt="Pencil 3" style="height: 264px"/>
+      <div class="product-info">
+        <h3>Paper Cutter Knife</h3>
+        <div class="price">₹30</div>
+      </div>
+      <button class="add-to-cart"><i class="fa fa-cart-plus"></i> Add to Cart</button>
+    </div>
+
+    <div class="gallery-item" data-name="Stapler" data-img="https://m.media-amazon.com/images/I/51uVIgUlSfL._AC_UF1000,1000_QL80_.jpg" data-price="₹50">
+      <img src="https://m.media-amazon.com/images/I/51uVIgUlSfL._AC_UF1000,1000_QL80_.jpg" alt="Pencil 3" style="height: 264px"/>
+      <div class="product-info">
+        <h3>Stapler</h3>
+        <div class="price">₹50</div>
+      </div>
+      <button class="add-to-cart"><i class="fa fa-cart-plus"></i> Add to Cart</button>
+    </div>
+
+     <div class="gallery-item" data-name="fevi kwik " data-img="https://5.imimg.com/data5/OH/TI/MY-48410390/fevi-kwik-instant-adhesive-gum.jpg" data-price="₹5">
+      <img src="https://5.imimg.com/data5/OH/TI/MY-48410390/fevi-kwik-instant-adhesive-gum.jpg" alt="Pencil 9" style="height: 264px"/>
+      <div class="product-info">
+        <h3>fevi kwik </h3>
+        <div class="price">₹5</div>
+      </div>
+      <button class="add-to-cart"><i class="fa fa-cart-plus"></i> Add to Cart</button>
+    </div>
+
+     <div class="gallery-item" data-name="Fevistik" data-img="https://2.imimg.com/data2/DM/SA/MY-4225784/fevi-stick-glue-stick-gum-white-ink.jpg" data-price="₹15">
+      <img src="https://2.imimg.com/data2/DM/SA/MY-4225784/fevi-stick-glue-stick-gum-white-ink.jpg" alt="Pencil 3" style="height: 264px"/>
+      <div class="product-info">
+        <h3>Fevistik</h3>
+        <div class="price">₹15</div>
+      </div>
+      <button class="add-to-cart"><i class="fa fa-cart-plus"></i> Add to Cart</button>
+    </div>
+
+     <div class="gallery-item" data-name="fevicol" data-img="https://m.media-amazon.com/images/I/61QubbwmjEL._AC_UF1000,1000_QL80_.jpg" data-price="₹25">
+      <img src="https://m.media-amazon.com/images/I/61QubbwmjEL._AC_UF1000,1000_QL80_.jpg" alt="Pencil 3" style="height: 264px"/>
+      <div class="product-info">
+        <h3>fevicol</h3>
+        <div class="price">₹25</div>
+      </div>
+      <button class="add-to-cart"><i class="fa fa-cart-plus"></i> Add to Cart</button>
+    </div>
+
+     <div class="gallery-item" data-name="water bottle" data-img="https://m.media-amazon.com/images/I/41Ws89dBcaL._SS200_.jpg" data-price="₹">
+      <img src="https://m.media-amazon.com/images/I/41Ws89dBcaL._SS200_.jpg" alt="Pencil 3" style="height: 264px"/>
+      <div class="product-info">
+        <h3>water bottle</h3>
+        <div class="price">₹250</div>
+      </div>
+      <button class="add-to-cart"><i class="fa fa-cart-plus"></i> Add to Cart</button>
+    </div>
+
+     <div class="gallery-item" data-name="Eraser" data-img="https://m.media-amazon.com/images/I/717F934AMkL._AC_UF1000,1000_QL80_.jpg" data-price="₹6">
+      <img src="https://m.media-amazon.com/images/I/717F934AMkL._AC_UF1000,1000_QL80_.jpg" alt="Pencil 3" style="height: 264px"/>
+      <div class="product-info">
+        <h3>Eraser</h3>
+        <div class="price">₹6</div>
+      </div>
+      <button class="add-to-cart"><i class="fa fa-cart-plus"></i> Add to Cart</button>
+    </div>
+
+     <div class="gallery-item" data-name="scientific calculator" data-img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSz4ODatWyUxTYXiTWQQ-65lbPEvnccs2EKkARk7bcBNnfdFsMQ-0QczD85YIzZPFq5pgU&usqp=CAU" data-price="₹750">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSz4ODatWyUxTYXiTWQQ-65lbPEvnccs2EKkARk7bcBNnfdFsMQ-0QczD85YIzZPFq5pgU&usqp=CAU" alt="Pencil 3" style="height: 264px"/>
+      <div class="product-info">
+        <h3>scientific calculator</h3>
+        <div class="price">₹750</div>
+      </div>
+      <button class="add-to-cart"><i class="fa fa-cart-plus"></i> Add to Cart</button>
+    </div>
+
+     <div class="gallery-item" data-name="sharpener" data-img="https://s7.orientaltrading.com/is/image/OrientalTrading/PDP_VIEWER_IMAGE/1-bulk-72-pc--solid-color-plastic-pencil-sharpeners-with-lids~13615844" data-price="₹5">
+      <img src="https://s7.orientaltrading.com/is/image/OrientalTrading/PDP_VIEWER_IMAGE/1-bulk-72-pc--solid-color-plastic-pencil-sharpeners-with-lids~13615844" alt="Pencil 3" style="height: 264px"/>
+      <div class="product-info">
+        <h3>sharpener</h3>
+        <div class="price">₹5</div>
+      </div>
+      <button class="add-to-cart"><i class="fa fa-cart-plus"></i> Add to Cart</button>
+    </div>
+
+    <div class="gallery-item" data-name="1 kerchief" data-img="https://m.media-amazon.com/images/I/61j729VCtqL._AC_UY1100_.jpg" data-price="₹30">
+      <img src="https://m.media-amazon.com/images/I/61j729VCtqL._AC_UY1100_.jpg" alt="Pencil 3" style="height: 264px"/>
+      <div class="product-info">
+        <h3>1 kerchief</h3>
+        <div class="price">₹30</div>
+      </div>
+      <button class="add-to-cart"><i class="fa fa-cart-plus"></i> Add to Cart</button>
+    </div>
+
+     <div class="gallery-item" data-name="Belt" data-img="https://s.alicdn.com/@sc04/kf/H20c5b1058a9c43608c97829aa3051e8d6.jpg_720x720q50.jpg" data-price="₹250">
+      <img src="https://s.alicdn.com/@sc04/kf/H20c5b1058a9c43608c97829aa3051e8d6.jpg_720x720q50.jpg" alt="Pencil 3" style="height: 264px"/>
+      <div class="product-info">
+        <h3>Belt</h3>
+        <div class="price">₹250</div>
+      </div>
+      <button class="add-to-cart"><i class="fa fa-cart-plus"></i> Add to Cart</button>
+    </div>
+
+     <div class="gallery-item" data-name="Lock and key" data-img="https://atlas-content-cdn.pixelsquid.com/stock-images/padlock-and-keys-4oODw65-600.jpg" data-price="₹50">
+      <img src="https://atlas-content-cdn.pixelsquid.com/stock-images/padlock-and-keys-4oODw65-600.jpg" alt="Pencil 3" style="height: 264px"/>
+      <div class="product-info">
+        <h3>Lock and key</h3>
+        <div class="price">₹50</div>
+      </div>
+      <button class="add-to-cart"><i class="fa fa-cart-plus"></i> Add to Cart</button>
+    </div>
+
+     <div class="gallery-item" data-name="ballon pocket" data-img="https://www.mxwholesale.co.uk/cdn/shop/products/5505_1_1080x.jpg?v=1549875704" data-price="50">
+      <img src="https://www.mxwholesale.co.uk/cdn/shop/products/5505_1_1080x.jpg?v=1549875704" alt="Pencil 3" style="height: 264px"/>
+      <div class="product-info">
+        <h3>ballon pocket</h3>
+        <div class="price">₹50</div>
+      </div>
+      <button class="add-to-cart"><i class="fa fa-cart-plus"></i> Add to Cart</button>
+    </div>
+
+    <div class="gallery-item" data-name="White chalk box" data-img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1AoLZtqxQa34-Yk1652hqpNcZSlaPSv_V4Q&s" data-price="₹70">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1AoLZtqxQa34-Yk1652hqpNcZSlaPSv_V4Q&s" alt="Pencil 3" style="height: 264px"/>
+      <div class="product-info">
+        <h3>White chalk box</h3>
+        <div class="price">₹70</div>
+      </div>
+      <button class="add-to-cart"><i class="fa fa-cart-plus"></i> Add to Cart</button>
+    </div>
+
+    <div class="gallery-item" data-name="color chalk mini box" data-img="https://penpoint.onlineshop.ug/media/catalog/product/cache/274cbef8455e8d410d588ed14f7ccd71/c/h/chalk_colored.psd_open_copy.jpg"" data-price="₹30">
+      <img src="https://penpoint.onlineshop.ug/media/catalog/product/cache/274cbef8455e8d410d588ed14f7ccd71/c/h/chalk_colored.psd_open_copy.jpg"" alt="Pencil 3" style="height: 264px"/>
+      <div class="product-info">
+        <h3>color chalk mini box</h3>
+        <div class="price">₹30</div>
+      </div>
+      <button class="add-to-cart"><i class="fa fa-cart-plus"></i> Add to Cart</button>
+    </div>
+
+    <!-- You can duplicate and change name/img/price for all 15 items -->
+
+  </div>
+
+  <script>
+    const buttons = document.querySelectorAll(".add-to-cart");
+
+    buttons.forEach(button => {
+      button.addEventListener("click", () => {
+        const item = button.closest(".gallery-item");
+        const name = item.dataset.name;
+        const img = item.dataset.img;
+        const price = item.dataset.price;
+
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        cart.push({ name, img, price });
+        localStorage.setItem("cart", JSON.stringify(cart));
+
+        // Redirect to cart page
+        window.location.href = "cart.html";
+      });
+    });
+  </script>
+</body>
+
+</html>
