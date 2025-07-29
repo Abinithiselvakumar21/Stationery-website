@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abikaavya Xerox - Pencil</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous" />
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+    }
+
+    h1.page-title {
+      text-align: center;
+      background-color: #00bcd4;
+      color: white;
+      padding: 1rem;
+      font-family: 'Pacifico', cursive;
+      margin: 0;
+      
+      
+
+    }
+
+    .gallery-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      padding: 2rem;
+     
+    }
+
+    .gallery-item {
+          width: 20%;
+          height:130%;
+      background-color: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s;
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.02);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 50%;
+      display: block;
+    }
+
+    .product-info {
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .product-info h3 {
+      margin: 0.5rem 0;
+      font-size: 1.1rem;
+      color: #333;
+    }
+
+    .product-info .price {
+      font-size: 1rem;
+      color: #4caf50;
+      font-weight: bold;
+    }
+
+    .add-to-cart {
+      background-color: #ff9800;
+      color: white;
+      border: none;
+      padding: 10px;
+      width: 100%;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 1rem;
+      border-radius: 0 0 8px 8px;
+    }
+
+    .add-to-cart:hover {
+      background-color: #e68900;
+    }
+
+    @media (max-width: 600px) {
+      .gallery-item {
+        width: 100%;
+        max-width: 90%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1 class="page-title">Pencil</h1>
+
+  <div class="gallery-container">
+    <!-- Example Item -->
+    <div class="gallery-item" data-name="Pencil " data-img="https://5.imimg.com/data5/IOS/Default/2024/3/398075335/CE/HH/RA/4987261/product-jpeg-500x500.png" data-price="₹5" style=0">
+      <img src="https://5.imimg.com/data5/IOS/Default/2024/3/398075335/CE/HH/RA/4987261/product-jpeg-500x500.png" alt="Pencil " style="height: 260px;"/>
+      <div class="product-info">
+        <h3>Per Pencil </h3>
+        <div class="price">₹5</div>
+      </div>
+      <button class="add-to-cart"><i class="fa fa-cart-plus"></i> Add to Cart</button>
+    </div>
+
+    <div class="gallery-item" data-name="Pencil " data-img="https://m.media-amazon.com/images/I/81UpaatfL2L._AC_UF1000,1000_QL80_.jpg" data-price="₹7">
+      <img src="https://m.media-amazon.com/images/I/81UpaatfL2L._AC_UF1000,1000_QL80_.jpg" alt="Pencil " />
+      <div class="product-info">
+        <h3>Per Pencil </h3>
+        <div class="price">₹7</div>
+      </div>
+      <button class="add-to-cart"><i class="fa fa-cart-plus"></i> Add to Cart</button>
+    </div>
+
+    <!-- Add more items like the above -->
+    <!-- Example: -->
+    <div class="gallery-item" data-name="Pencil " data-img="https://m.media-amazon.com/images/I/41y5y9LgnbL._AC_UF350,350_QL80_.jpg" data-price="15">
+      <img src="https://m.media-amazon.com/images/I/41y5y9LgnbL._AC_UF350,350_QL80_.jpg" alt="Pencil " />
+      <div class="product-info">
+        <h3>Per Pencil </h3>
+        <div class="price">₹15</div>
+      </div>
+      <button class="add-to-cart"><i class="fa fa-cart-plus"></i> Add to Cart</button>
+    </div>
+
+    <div class="gallery-item" data-name="Pencil " data-img="https://rukminim2.flixcart.com/image/850/1000/xif0q/pencil/m/9/f/moti-pencil-round-shaped-color-pencils-razy-original-imagtynhaaam82bm.jpeg?q=90&crop=false" data-price="₹12">
+      <img src="https://rukminim2.flixcart.com/image/850/1000/xif0q/pencil/m/9/f/moti-pencil-round-shaped-color-pencils-razy-original-imagtynhaaam82bm.jpeg?q=90&crop=false" alt="Pencil " style="height: 264px"/>
+      <div class="product-info">
+        <h3>Per Pencil </h3>
+        <div class="price">₹12</div>
+      </div>
+      <button class="add-to-cart"><i class="fa fa-cart-plus"></i> Add to Cart</button>
+    </div>
+
+
+    <div class="gallery-item" data-name="Pencil " data-img="https://m.media-amazon.com/images/I/61QcPEcOAQL._AC_UF350,350_QL80_.jpg" data-price="₹20">
+      <img src="https://m.media-amazon.com/images/I/61QcPEcOAQL._AC_UF350,350_QL80_.jpg" alt="Pencil " style="height: 264px"/>
+      <div class="product-info">
+        <h3>Per Pencil </h3>
+        <div class="price">₹20</div>
+      </div>
+      <button class="add-to-cart"><i class="fa fa-cart-plus"></i> Add to Cart</button>
+    </div>
+
+    <div class="gallery-item" data-name="Pencil " data-img="https://images.currentcatalog.com/catalog/product/450x450/812315/812315_1.jpg" data-price="₹7">
+      <img src="https://images.currentcatalog.com/catalog/product/450x450/812315/812315_1.jpg" alt="Pencil " style="height: 264px"/>
+      <div class="product-info">
+        <h3>Per Pencil </h3>
+        <div class="price">₹7</div>
+      </div>
+      <button class="add-to-cart"><i class="fa fa-cart-plus"></i> Add to Cart</button>
+    </div>
+
+    <div class="gallery-item" data-name="Pencil " data-img="https://5.imimg.com/data5/SELLER/Default/2023/2/IL/VC/AR/73895307/pencil-500x500.jpeg" data-price="₹5">
+      <img src="https://5.imimg.com/data5/SELLER/Default/2023/2/IL/VC/AR/73895307/pencil-500x500.jpeg" alt="Pencil " style="height: 264px"/>
+      <div class="product-info">
+        <h3>Per Pencil </h3>
+        <div class="price">₹5</div>
+      </div>
+      <button class="add-to-cart"><i class="fa fa-cart-plus"></i> Add to Cart</button>
+    </div>
+
+    <div class="gallery-item" data-name="Pencil " data-img="https://m.media-amazon.com/images/I/51hVepdyybL._SL500_.jpg" data-price="₹7">
+      <img src="https://m.media-amazon.com/images/I/51hVepdyybL._SL500_.jpg" alt="Pencil " style="height: 264px"/>
+      <div class="product-info">
+        <h3>Per Pencil </h3>
+        <div class="price">₹7</div>
+      </div>
+      <button class="add-to-cart"><i class="fa fa-cart-plus"></i> Add to Cart</button>
+    </div>
+
+     <div class="gallery-item" data-name="Pencil " data-img="https://www.sitaramstationers.com/wp-content/uploads/2022/09/DOMS-Drawing-Sketching-Graphite-Pencil-Set-Pack-of-6-x-5-Set-4-150x150.jpg" data-price="₹6">
+      <img src="https://www.sitaramstationers.com/wp-content/uploads/2022/09/DOMS-Drawing-Sketching-Graphite-Pencil-Set-Pack-of-6-x-5-Set-4-150x150.jpg" alt="Pencil " style="height: 264px"/>
+      <div class="product-info">
+        <h3>Per Pencil </h3>
+        <div class="price">₹6</div>
+      </div>
+      <button class="add-to-cart"><i class="fa fa-cart-plus"></i> Add to Cart</button>
+    </div>
+
+     <div class="gallery-item" data-name="Pencil " data-img="https://www.jiomart.com/images/product/original/rvhr4phpbr/flair-creative-series-gem-2b-graphite-pencil-extra-dark-pencil-black-matte-finish-lightweight-with-comfortable-grip-black-tumbler-pack-of-50-pcs-pencil-product-images-orvhr4phpbr-p601886633-0-202305271205.jpg?im=Resize=(1000,1000)" data-price="₹18">
+      <img src="https://www.jiomart.com/images/product/original/rvhr4phpbr/flair-creative-series-gem-2b-graphite-pencil-extra-dark-pencil-black-matte-finish-lightweight-with-comfortable-grip-black-tumbler-pack-of-50-pcs-pencil-product-images-orvhr4phpbr-p601886633-0-202305271205.jpg?im=Resize=(1000,1000)" alt="Pencil " style="height: 264px"/>
+      <div class="product-info">
+        <h3>Per Pencil </h3>
+        <div class="price">₹10</div>
+      </div>
+      <button class="add-to-cart"><i class="fa fa-cart-plus"></i> Add to Cart</button>
+    </div>
+
+     <div class="gallery-item" data-name="Pencil " data-img="https://images.meesho.com/images/products/270872555/md6gf_512.jpg" data-price="₹10">
+      <img src="https://images.meesho.com/images/products/270872555/md6gf_512.jpg" alt="Pencil " style="height: 264px"/>
+      <div class="product-info">
+        <h3>Per Pencil </h3>
+        <div class="price">₹7</div>
+      </div>
+      <button class="add-to-cart"><i class="fa fa-cart-plus"></i> Add to Cart</button>
+    </div>
+
+     <div class="gallery-item" data-name="Pencil " data-img="https://m.media-amazon.com/images/I/51p5USVcF8L._AC_.jpg" data-price="₹6">
+      <img src="https://m.media-amazon.com/images/I/51p5USVcF8L._AC_.jpg" alt="Pencil " style="height: 264px"/>
+      <div class="product-info">
+        <h3>Per Pencil </h3>
+        <div class="price">₹6</div>
+      </div>
+      <button class="add-to-cart"><i class="fa fa-cart-plus"></i> Add to Cart</button>
+    </div>
+
+     <div class="gallery-item" data-name="Pencil " data-img="https://media.karousell.com/media/photos/products/2020/6/5/drawing_pencil_set_1591324504_6ecb1b64_progressive.jpg" data-price="₹70">
+      <img src="https://media.karousell.com/media/photos/products/2020/6/5/drawing_pencil_set_1591324504_6ecb1b64_progressive.jpg" alt="Pencil " style="height: 264px"/>
+      <div class="product-info">
+        <h3>Set BOx </h3>
+        <div class="price">₹70</div>
+      </div>
+      <button class="add-to-cart"><i class="fa fa-cart-plus"></i> Add to Cart</button>
+    </div>
+
+     <div class="gallery-item" data-name="Pencil " data-img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKXLh025FYfhJMah9IXLCdnGgDnImCjTh6p-XJyofdLoUpQPJJfUDXm4LrYA1RMGkDwok&usqp=CAU" data-price="₹7">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKXLh025FYfhJMah9IXLCdnGgDnImCjTh6p-XJyofdLoUpQPJJfUDXm4LrYA1RMGkDwok&usqp=CAU" alt="Pencil " style="height: 264px"/>
+      <div class="product-info">
+        <h3>Per Drawing Pencil </h3>
+        <div class="price">₹7</div>
+      </div>
+      <button class="add-to-cart"><i class="fa fa-cart-plus"></i> Add to Cart</button>
+    </div>
+
+     <div class="gallery-item" data-name="Pencil " data-img="https://www.pens.com/blog/wp-content/uploads/2020/06/Round-Pencil.png" data-price="₹7">
+      <img src="https://www.pens.com/blog/wp-content/uploads/2020/06/Round-Pencil.png" alt="Pencil " style="height: 264px"/>
+      <div class="product-info">
+        <h3>Per Pencil </h3>
+        <div class="price">₹7</div>
+      </div>
+      <button class="add-to-cart"><i class="fa fa-cart-plus"></i> Add to Cart</button>
+    </div>
+
+    <!-- You can duplicate and change name/img/price for all 15 items -->
+
+  </div>
+
+  <script>
+    const buttons = document.querySelectorAll(".add-to-cart");
+
+    buttons.forEach(button => {
+      button.addEventListener("click", () => {
+        const item = button.closest(".gallery-item");
+        const name = item.dataset.name;
+        const img = item.dataset.img;
+        const price = item.dataset.price;
+
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        cart.push({ name, img, price });
+        localStorage.setItem("cart", JSON.stringify(cart));
+
+        // Redirect to cart page
+        window.location.href = "cart.html";
+      });
+    });
+  </script>
+</body>
+
+</html>

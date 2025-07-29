@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abikaavya Xerox - Pencil</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous" />
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+    }
+
+    h1.page-title {
+      text-align: center;
+      background-color: #00bcd4;
+      color: white;
+      padding: 1rem;
+      font-family: 'Pacifico', cursive;
+      margin: 0;
+      
+      
+
+    }
+
+    .gallery-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      padding: 2rem;
+     
+    }
+
+    .gallery-item {
+          width: 20%;
+          height:130%;
+      background-color: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s;
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.02);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 50%;
+      display: block;
+    }
+
+    .product-info {
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .product-info h3 {
+      margin: 0.5rem 0;
+      font-size: 1.1rem;
+      color: #333;
+    }
+
+    .product-info .price {
+      font-size: 1rem;
+      color: #4caf50;
+      font-weight: bold;
+    }
+
+    .add-to-cart {
+      background-color: #ff9800;
+      color: white;
+      border: none;
+      padding: 10px;
+      width: 100%;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 1rem;
+      border-radius: 0 0 8px 8px;
+    }
+
+    .add-to-cart:hover {
+      background-color: #e68900;
+    }
+
+    @media (max-width: 600px) {
+      .gallery-item {
+        width: 100%;
+        max-width: 90%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1 class="page-title">Colors</h1>
+
+  <div class="gallery-container">
+    <!-- Example Item -->
+    <div class="gallery-item" data-name="Color Pencil box" data-img="https://s3.envato.com/files/237509324/art%20IMG_8194.jpg" data-price="₹90">
+      <img src="https://s3.envato.com/files/237509324/art%20IMG_8194.jpg" alt="Pencil 1" style="height: 260px;"/>
+      <div class="product-info">
+        <h3>Color Pencil Box</h3>
+        <div class="price">₹90</div>
+      </div>
+      <button class="add-to-cart"><i class="fa fa-cart-plus"></i> Add to Cart</button>
+    </div>
+
+    <div class="gallery-item" data-name="Color Pencil box" data-img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeYNgtFVeAhM9ZEpjI_hBMVb9X_nZOBhfUuQ&s" data-price="₹30">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeYNgtFVeAhM9ZEpjI_hBMVb9X_nZOBhfUuQ&s" alt="Pencil 2" style="height: 260px;"/>
+      <div class="product-info">
+        <h3>Color Pencil box</h3>
+        <div class="price">₹30</div>
+      </div>
+      <button class="add-to-cart"><i class="fa fa-cart-plus"></i> Add to Cart</button>
+    </div>
+
+    <!-- Add more items like the above -->
+    <!-- Example: -->
+    <div class="gallery-item" data-name="Color crayons box" data-img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8vP2hZDAKmgJxVjgI8t5YAp3T0Nk0DbOnGw&s" data-price="₹25">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8vP2hZDAKmgJxVjgI8t5YAp3T0Nk0DbOnGw&s" alt="Pencil 3" style="height: 260px;"/>
+      <div class="product-info">
+        <h3>Color crayons box</h3>
+        <div class="price">₹25</div>
+      </div>
+      <button class="add-to-cart"><i class="fa fa-cart-plus"></i> Add to Cart</button>
+    </div>
+
+    <div class="gallery-item" data-name="Color Sketch " data-img="https://m.media-amazon.com/images/I/61+Z408-JZL._AC_UF894,1000_QL80_.jpg" data-price="₹30">
+      <img src="https://m.media-amazon.com/images/I/61+Z408-JZL._AC_UF894,1000_QL80_.jpg" alt="Pencil 3" style="height: 260px"/>
+      <div class="product-info">
+        <h3>Color Sketch</h3>
+        <div class="price">₹30</div>
+      </div>
+      <button class="add-to-cart"><i class="fa fa-cart-plus"></i> Add to Cart</button>
+    </div>
+
+
+    <div class="gallery-item" data-name="White Board Marker Box" data-img="https://st2.depositphotos.com/1785730/6300/i/450/depositphotos_63004285-stock-photo-colored-markers.jpg" data-price="₹50">
+      <img src="https://st2.depositphotos.com/1785730/6300/i/450/depositphotos_63004285-stock-photo-colored-markers.jpg" alt="Pencil 3" style="height: 260px"/>
+      <div class="product-info">
+        <h3>White Board Marker</h3>
+        <div class="price">₹50</div>
+      </div>
+      <button class="add-to-cart"><i class="fa fa-cart-plus"></i> Add to Cart</button>
+    </div>
+
+    <div class="gallery-item" data-name="Color Marker 8pcs" data-img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZgPUlfXBOh5xRna5Jnm-gHN6qNA3qcM8zl9pzQ3Pd3EPflk4gQY44RRtUmKPpLAgJ8y8&usqp=CAU" data-price="₹96">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZgPUlfXBOh5xRna5Jnm-gHN6qNA3qcM8zl9pzQ3Pd3EPflk4gQY44RRtUmKPpLAgJ8y8&usqp=CAU" alt="Pencil 3" style="height: 260px"/>
+      <div class="product-info">
+        <h3>Color Marker 8pcs</h3>
+        <div class="price">₹96</div>
+      </div>
+      <button class="add-to-cart"><i class="fa fa-cart-plus"></i> Add to Cart</button>
+    </div>
+
+    <div class="gallery-item" data-name="Color crayons box" data-img="https://res.cloudinary.com/adveogroupfrance/image/upload/s--sD3FMrZU--/c_pad,dpr_auto,f_auto,h_500,w_500/v1/Produits/463393_d1.jpg" data-price="₹80">
+      <img src="https://res.cloudinary.com/adveogroupfrance/image/upload/s--sD3FMrZU--/c_pad,dpr_auto,f_auto,h_500,w_500/v1/Produits/463393_d1.jpg" alt="Pencil 3" style="height: 264px"/>
+      <div class="product-info">
+        <h3>Color crayons box</h3>
+        <div class="price">₹80</div>
+      </div>
+      <button class="add-to-cart"><i class="fa fa-cart-plus"></i> Add to Cart</button>
+    </div>
+
+    <div class="gallery-item" data-name="quik stik color" data-img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQb5lQi536RiJ7zfhCaFnxS6EJasaAUkzsCJzsEucL2bLRdrM5I0XLGpsgtoZ1Dgki4SG4&usqp=CAU" data-price="₹450">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQb5lQi536RiJ7zfhCaFnxS6EJasaAUkzsCJzsEucL2bLRdrM5I0XLGpsgtoZ1Dgki4SG4&usqp=CAU" alt="Pencil 3" style="height: 264px"/>
+      <div class="product-info">
+        <h3>quik stik color</h3>
+        <div class="price">₹450</div>
+      </div>
+      <button class="add-to-cart"><i class="fa fa-cart-plus"></i> Add to Cart</button>
+    </div>
+
+     <div class="gallery-item" data-name="Korea Marker 1pcs" data-img="https://m.media-amazon.com/images/I/81PVv1yr60L._AC_UF1000,1000_QL80_.jpg" data-price="₹15">
+      <img src="https://m.media-amazon.com/images/I/81PVv1yr60L._AC_UF1000,1000_QL80_.jpg" alt="Pencil 9" style="height: 264px"/>
+      <div class="product-info">
+        <h3>Korea Marker 1pcs</h3>
+        <div class="price">₹15</div>
+      </div>
+      <button class="add-to-cart"><i class="fa fa-cart-plus"></i> Add to Cart</button>
+    </div>
+
+     <div class="gallery-item" data-name="CD Marker 1pcs" data-img="https://www.shaanstationery.com/image/cache/catalog/camlin/camlin-cd-marker-600x315.jpg" data-price="₹15">
+      <img src="https://www.shaanstationery.com/image/cache/catalog/camlin/camlin-cd-marker-600x315.jpg" alt="Pencil 3" style="height: 264px"/>
+      <div class="product-info">
+        <h3>CD Marker 1pcs</h3>
+        <div class="price">₹15</div>
+      </div>
+      <button class="add-to-cart"><i class="fa fa-cart-plus"></i> Add to Cart</button>
+    </div>
+
+     <div class="gallery-item" data-name="Pencil 11" data-img="https://www.jarir.com/cdn-cgi/image/fit=contain,width=350,height=auto,quality=85,metadata=none/https://ak-asset.jarir.com/akeneo-prod/asset/m1images/2/7/27882_2.jpg" data-price="₹18">
+      <img src="https://www.jarir.com/cdn-cgi/image/fit=contain,width=350,height=auto,quality=85,metadata=none/https://ak-asset.jarir.com/akeneo-prod/asset/m1images/2/7/27882_2.jpg" alt="Pencil 3" style="height: 264px"/>
+      <div class="product-info">
+        <h3>Pencil 3</h3>
+        <div class="price">₹18</div>
+      </div>
+      <button class="add-to-cart"><i class="fa fa-cart-plus"></i> Add to Cart</button>
+    </div>
+
+     <div class="gallery-item" data-name="White Board Marker" data-img="https://rukminim1.flixcart.com/image/300/300/k2krekw0/art-set/x/u/s/watercolor-tray-colouring-kit-arvana-original-imafhwh4yxeyhwrz.jpeg" data-price="₹150   ">
+      <img src="https://rukminim1.flixcart.com/image/300/300/k2krekw0/art-set/x/u/s/watercolor-tray-colouring-kit-arvana-original-imafhwh4yxeyhwrz.jpeg" alt="Pencil 3" style="height: 264px"/>
+      <div class="product-info">
+        <h3>White Board Marker</h3>
+        <div class="price">₹150</div>
+      </div>
+      <button class="add-to-cart"><i class="fa fa-cart-plus"></i> Add to Cart</button>
+    </div>
+
+     <div class="gallery-item" data-name="Paint Marker 1pcs" data-img="https://d3ni7gfisywg43.cloudfront.net/images/article/6285-0-S.jpg?v=1" data-price="₹70">
+      <img src="https://d3ni7gfisywg43.cloudfront.net/images/article/6285-0-S.jpg?v=1" alt="Pencil 3" style="height: 264px"/>
+      <div class="product-info">
+        <h3>Paint Marker 1pcs</h3>
+        <div class="price">₹70</div>
+      </div>
+      <button class="add-to-cart"><i class="fa fa-cart-plus"></i> Add to Cart</button>
+    </div>
+
+     <div class="gallery-item" data-name="Water Paint" data-img="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQwjbBy3xvmHTgYe3BzllY1BMLtUAcetfgT5i-KUKJSZk9DwFJvV5ADrmjXqwMUsjkaT7vyYoybxYrTWgL1yc1yk67Drzpk4I_P2ucEffa1mPt1HEneTjeOPQ" data-price="₹50">
+      <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQwjbBy3xvmHTgYe3BzllY1BMLtUAcetfgT5i-KUKJSZk9DwFJvV5ADrmjXqwMUsjkaT7vyYoybxYrTWgL1yc1yk67Drzpk4I_P2ucEffa1mPt1HEneTjeOPQ" alt="Pencil 3" style="height: 264px"/>
+      <div class="product-info">
+        <h3>Water Paint</h3>
+        <div class="price">₹50</div>
+      </div>
+      <button class="add-to-cart"><i class="fa fa-cart-plus"></i> Add to Cart</button>
+    </div>
+
+     <div class="gallery-item" data-name="Water Color" data-img="https://shoptantrum.com/cdn/shop/products/53fff912-46ea-334c-9630-e1eaf25369ef.png?v=1723243066" data-price="₹70">
+      <img src="https://shoptantrum.com/cdn/shop/products/53fff912-46ea-334c-9630-e1eaf25369ef.png?v=1723243066" alt="Pencil 3" style="height: 264px"/>
+      <div class="product-info">
+        <h3>Water Color</h3>
+        <div class="price">₹70</div>
+      </div>
+      <button class="add-to-cart"><i class="fa fa-cart-plus"></i> Add to Cart</button>
+    </div>
+
+      <div class="gallery-item" data-name="Poster Color" data-img="https://rukminim2.flixcart.com/image/750/900/xif0q/paint/g/q/0/-original-imagqz9qc2ggks6n.jpeg?q=20&crop=false" data-price="₹170">
+      <img src="https://rukminim2.flixcart.com/image/750/900/xif0q/paint/g/q/0/-original-imagqz9qc2ggks6n.jpeg?q=20&crop=false" alt="Pencil 3" style="height: 264px"/>
+      <div class="product-info">
+        <h3>Poster Color 14pcs </h3>
+        <div class="price">₹170</div>
+      </div>
+      <button class="add-to-cart"><i class="fa fa-cart-plus"></i> Add to Cart</button>
+    </div>
+
+    <!-- You can duplicate and change name/img/price for all 15 items -->
+
+  </div>
+
+  <script>
+    const buttons = document.querySelectorAll(".add-to-cart");
+
+    buttons.forEach(button => {
+      button.addEventListener("click", () => {
+        const item = button.closest(".gallery-item");
+        const name = item.dataset.name;
+        const img = item.dataset.img;
+        const price = item.dataset.price;
+
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        cart.push({ name, img, price });
+        localStorage.setItem("cart", JSON.stringify(cart));
+
+        // Redirect to cart page
+        window.location.href = "cart.html";
+      });
+    });
+  </script>
+</body>
+
+</html>

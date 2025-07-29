@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cart - Abikaavya Xerox</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous" />
+  <style>
+    body { font-family: Arial, sans-serif; padding: 2rem; margin: 0 }
+    h1 { text-align: center; background: #00bcd4; color: #fff; padding: 1rem; margin: -2rem -2rem 2rem }
+    .cart-container { display: flex; flex-direction: column; gap: 1rem; max-width: 800px; margin: auto }
+    .cart-item { display: flex; align-items: center; border: 1px solid #ddd; border-radius: 8px; padding: 1rem; position: relative }
+    .cart-item img { width: 150px; border-radius: 4px; margin-right: 1rem }
+    .item-name { font-size: 1.2rem; flex: 1 }
+    .item-price { font-weight: bold; color: #4caf50 }
+    .remove-btn { position: absolute; top: 8px; right: 12px; background: none; border: none; color: red; font-size: 1.2rem; cursor: pointer }
+    .empty-message { text-align: center; font-size: 1.2rem; color: #777 }
+    .total-section { text-align: right; font-size: 1.2rem; font-weight: bold; margin-top: 1rem; padding-top: 1rem; border-top: 2px solid #ccc }
+    .back-btn, .place-order-btn {
+      display: inline-block; margin-top: 2rem; background: #00bcd4; color: #fff;
+      padding: 10px 20px; border: none; border-radius: 5px; text-decoration: none;
+      font-weight: bold; cursor: pointer;
+    }
+    .back-btn:hover, .place-order-btn:hover { background: #0191a5 }
+    .place-order-btn[disabled] { background: #aaa; cursor: not-allowed }
+
+    .form-section {
+      max-width: 600px;
+      margin: 2rem auto;
+      text-align: left;
+      background: #f9f9f9;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    .form-section h3 { margin-bottom: 1rem; color: #333 }
+    .form-section label { display: block; margin-bottom: 0.5rem }
+    .form-section input, .form-section textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 1rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+  <h1>Your Cart</h1>
+
+  <div id="cart-container" class="cart-container"></div>
+  <div id="total-section" class="total-section"></div>
+
+  <div class="form-section">
+    <h3>Customer Details</h3>
+    <label>Name:<br><input id="cust-name" type="text" placeholder="Enter your name" required></label>
+    <label>Phone Number:<br><input id="cust-phone" type="tel" placeholder="Enter your phone number" required></label>
+    <label>Address:<br><textarea id="cust-address" rows="3" placeholder="Enter your address" required></textarea></label>
+  </div>
+
+  <div style="text-align:center">
+    <a href="collection.html" class="back-btn"><i class="fa fa-arrow-left"></i> Continue Shopping</a>
+    <button id="order-btn" class="place-order-btn">🛒 Place Order</button>
+  </div>
+
+  <script>
+    const container = document.getElementById("cart-container");
+    const totalSection = document.getElementById("total-section");
+    const orderBtn = document.getElementById("order-btn");
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    function renderCart() {
+      container.innerHTML = "";
+      let total = 0;
+
+      if (cart.length === 0) {
+        container.innerHTML = '<p class="empty-message">Your cart is empty.</p>';
+        totalSection.textContent = "";
+        orderBtn.disabled = true;
+        return;
+      }
+      orderBtn.disabled = false;
+
+      cart.forEach((item, index) => {
+        const priceNum = parseFloat((item.price + "").replace(/[^\d.-]/g, "")) || 0;
+        total += priceNum;
+
+        const div = document.createElement("div");
+        div.className = "cart-item";
+        div.innerHTML = `
+          <button class="remove-btn" data-index="${index}"><i class="fa fa-times"></i></button>
+          <img src="${item.img}" alt="${item.name}">
+          <div class="item-name">${item.name}</div>
+          <div class="item-price">₹${priceNum.toFixed(2)}</div>
+        `;
+        container.appendChild(div);
+      });
+
+      totalSection.textContent = `Total: ₹${total.toFixed(2)}`;
+
+      document.querySelectorAll(".remove-btn").forEach(btn => {
+        btn.onclick = e => {
+          const i = +e.currentTarget.dataset.index;
+          cart.splice(i, 1);
+          localStorage.setItem("cart", JSON.stringify(cart));
+          renderCart();
+        };
+      });
+    }
+
+    function placeOrder() {
+      if (cart.length === 0) return;
+
+      const name = document.getElementById("cust-name").value.trim();
+      const phone = document.getElementById("cust-phone").value.trim();
+      const address = document.getElementById("cust-address").value.trim();
+
+      if (!name || !phone || !address) {
+        alert("Please fill in all customer details.");
+        return;
+      }
+
+      if (!confirm("Do you want to place the order?")) return;
+
+      const order = {
+        name,
+        phone,
+        address,
+        items: cart,
+        total: cart.reduce((s, i) => {
+          const p = parseFloat((i.price + "").replace(/[^\d.-]/g, "")) || 0;
+          return s + p;
+        }, 0),
+        ts: Date.now()
+      };
+
+      localStorage.setItem("lastOrder", JSON.stringify(order));
+      localStorage.removeItem("cart");
+      window.location.href = "order.html";
+    }
+
+    orderBtn.addEventListener("click", placeOrder);
+    renderCart();
+  </script>
+</body>
+</html>

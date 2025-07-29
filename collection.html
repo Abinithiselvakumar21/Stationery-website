@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abikaavya Xerox</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Grey+Qo&family=Monsieur+La+Doulaise&family=Pacifico&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="collection.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <h1>Abikaavya Xerox and Stationery</h1>
+        <div class="navbar-links">
+            <a href="index.html">Home</a>
+            <a href="collection.html">Collection</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="navbar-menu-toggle" onclick="showNavbar()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </nav>
+
+    <!-- Side Navbar (for mobile) -->
+    <div class="side-navbar" id="sideNavbar">
+        <p onclick="closeNavbar()"><i class="fa-solid fa-xmark"></i></p>
+        <a href="abi.html">Home</a>
+        <a href="collection.html">Collection</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <!-- Product Container -->
+    <div class="product-container">
+        <!-- Row 1 -->
+        <div class="product-item">
+            <img src="https://5.imimg.com/data5/IOS/Default/2024/3/398075335/CE/HH/RA/4987261/product-jpeg-500x500.png" alt="Pencil" />
+            <a href="pencil.html" class="btn">Pencil</a>
+        </div>
+        <div class="product-item">
+            <img src="https://tse2.mm.bing.net/th/id/OIP.waKijnePO7FmJ7gPr57Y7QHaHa?pid=Api&P=0&h=180 alt="Tip Pencil" />
+            <a href="tip pencil.html" class="btn">Tip Pencil</a>
+        </div>
+        <div class="product-item">
+            <img src="https://img.freepik.com/free-vector/stationery-realistic-set-coloured-pencils-pens-markers-rulers-watercolours-paperclips-scissors-rubber-sharpener-brushes-isolated-vector-illustration_1284-84111.jpg?semt=ais_hybrid" alt="Colors" />
+            <a href="colors.html" class="btn">Colors</a>
+        </div>
+
+        <!-- Row 2 -->
+        <div class="product-item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJCEX5QbZDO0zYTcAsnWwo3sYGzFj6qiIUwGvNB7G7a53VFLox5BIfIeFWWZPRkbULtTU&usqp=CAU" alt="Pens" />
+            <a href="pen.html" class="btn">Pens</a>
+        </div>
+        <div class="product-item">
+            <img src="https://img.drz.lazcdn.com/g/kf/S88846de191fe4764a97cc0b3a1a46019P.jpg_720x720q80.jpg" alt="Papers" />
+            <a href="papers.html" class="btn">Papers</a>
+        </div>
+        <div class="product-item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRV7dsHZwLXXeq5g3-94a9DnxCOBXlrA_BHkw&s" alt="Files" />
+            <a href="files.html" class="btn">Files</a>
+        </div>
+
+        <!-- Row 3 -->
+        <div class="product-item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUo98C3dGn048ruAE7VvY5S3cJXAA1mJS3IMS6NUNVxOXVcH6Vkv7ohOI2aQHTM9OLtJU&usqp=CAU" alt="Others" />
+            <a href="others.html" class="btn">Others</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-box">
+            <h2>Abikaavya</h2>
+            <p>An exclusive range of notebooks, diaries, and pens. With innovative cover designs, each notebook dons a classy look.</p>
+            <div class="social-icons">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-telegram"></i>
+            </div>
+            <p>abikaavyaxerox@gmail.com</p>
+            <h4>9940764177</h4>
+        </div>
+    </footer>
+
+    <script>
+        function showNavbar() {
+            document.getElementById('sideNavbar').style.left = "0";
+        }
+        function closeNavbar() {
+            document.getElementById('sideNavbar').style.left = "-100%";
+        }
+    </script>
+</body>
+
+</html>

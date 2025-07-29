@@ -1,0 +1,39 @@
+<!-- Save as checkout.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Checkout</title>
+</head>
+<body>
+  <h1>Place Order</h1>
+  <input type="text" id="name" placeholder="Enter your name" required />
+  <button onclick="placeOrder()">Place Order</button>
+
+  <script>
+    function placeOrder() {
+      const customerName = document.getElementById("name").value.trim();
+      if (!customerName) {
+        alert("Please enter your name");
+        return;
+      }
+
+      const order = {
+        ts: Date.now(),
+        customerName,
+        items: [
+          { name: "T-Shirt", img: "tshirt.jpg", price: "₹499" },
+          { name: "Cap", img: "cap.jpg", price: "₹299" }
+        ],
+        total: 798
+      };
+
+      // Save to localStorage
+      localStorage.setItem("lastOrder", JSON.stringify(order));
+
+      // Go to confirmation page
+      window.location.href = "confirmation.html";
+    }
+  </script>
+</body>
+</html>

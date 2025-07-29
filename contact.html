@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abikaavya Xerox</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Grey+Qo&family=Monsieur+La+Doulaise&family=Pacifico&display=swap"
+    rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    /* Existing navbar & mobile menu styles */
+    .side-navbar {
+      display: none;
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 60%;
+      height: 100%;
+      background: #222;
+      color: #fff;
+      z-index: 1000;
+      padding: 20px;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+    }
+
+    .navbar-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .navbar-link a {
+      text-decoration: none;
+      color: #000;
+    }
+
+    .navbar-menu-toggle {
+      display: none;
+    }
+
+    @media (max-width:768px) {
+      .navbar-links {
+        display: none;
+      }
+
+      .navbar-menu-toggle {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+      }
+
+      .side-navbar-links p {
+        margin: 15px 0;
+      }
+
+      .side-navbar-link a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 18px;
+      }
+    }
+
+    /* Responsive Google Map */
+    .responsive-map {
+      position: relative;
+      overflow: hidden;
+      padding-bottom: 56.25%;
+      /* 16:9 aspect ratio */
+      height: 0;
+      margin: 20px 0;
+    }
+
+    .responsive-map iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 50%;
+      border: 0;
+    }
+
+  
+
+
+
+
+
+
+
+
+
+
+
+      @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+
+  .footer {
+    position: relative;
+    background-image: url('https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1500&q=80');
+    background-size: cover;
+    background-position: center;
+    padding: 60px 20px;
+    animation: fadeIn 2s ease-in-out;
+    color: #fff;
+    overflow: hidden;
+  }
+
+  .footer-overlay {
+    /* background: rgba(0, 0, 0, 0.75); */
+    padding: 40px 20px;
+    border-radius: 10px;
+    animation: fadeInUp 1s ease-in-out;
+  }
+
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-box {
+    max-width: 500px;
+  }
+
+  .footer-heading {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    color: #ffd700;
+    animation: fadeInUp 1.2s ease;
+  }
+
+  .footer-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #f0f0f0;
+    animation: fadeInUp 1.4s ease;
+  }
+
+  .footer-socials a {
+    margin: 0 10px;
+    font-size: 1.6rem;
+    color: #fff;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+
+  .footer-socials a:hover {
+    color: #ffd700;
+    transform: scale(1.2);
+  }
+
+  .footer-contact {
+    margin-top: 30px;
+    font-size: 1rem;
+    animation: fadeInUp 1.6s ease;
+  }
+
+  .footer-contact p {
+    margin: 8px 0;
+    color: #ccc;
+    margin-left: 30%;
+  }
+
+  .footer-contact i {
+    margin-right: 10px;
+    color: #ffd700;
+  }
+
+  @media (min-width: 768px) {
+    .footer-container {
+      flex-direction: row;
+      justify-content: space-between;
+      text-align: left;
+    }
+
+    .footer-box, .footer-contact {
+      flex: 1;
+      padding: 0 20px;
+    }
+  }
+
+  /* Animations */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <h1>Abikaavya Xerox and Stationery</h1>
+    <div class="navbar-links">
+      <p class="navbar-link"><a href="index.html">Home</a></p>
+      <p class="navbar-link"><a href="collection.html">Collection</a></p>
+      <p class="navbar-link"><a href="contact.html">Contact</a></p>
+    </div>
+    <div class="navbar-menu-toggle" onclick="showNavbar()">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+  </nav>
+
+  <!-- Mobile Side Navbar -->
+  <div class="side-navbar" id="sideNavbar">
+    <p style="text-align:right;" onclick="closeNavbar()"><i class="fa-solid fa-xmark"></i></p>
+    <div class="side-navbar-links">
+      <p class="side-navbar-link"><a href="index.html">Home</a></p>
+      <p class="side-navbar-link"><a href="collection.html">Collection</a></p>
+      <p class="side-navbar-link"><a href="contact.html">Contact</a></p>
+    </div>
+  </div>
+
+  <!-- Footer
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-box-1">
+        <h2 class="headingText">Abikaavya</h2><br />
+        <p>An exclusive range of notebooks, diaries, as well as diary and pen. With innovative cover designs, each
+          notebook dons a classy look.</p>
+        <div class="footer-icons-container"><br />
+          <i class="fa-brands fa-instagram" style="color:#ffffff;"></i>
+          <i class="fa-brands fa-facebook" style="color:#ffffff;"></i>
+          <i class="fa-brands fa-telegram" style="color:#ffffff;"></i>
+        </div>
+      </div>
+    </div>
+    <br/>
+    <p>abikaavyaxerox@gmail.com</p><br/>
+    <h4>9940764177</h4>
+    </footer> -->
+
+    <!-- Footer -->
+<footer class="footer">
+  <div class="footer-overlay">
+    <div class="footer-container">
+      <div class="footer-box">
+        <h2 class="footer-heading">Abikaavya</h2>
+        <p class="footer-description">
+          An exclusive range of notebooks and diaries with innovative cover designs that give a classy look.
+        </p>
+        <div class="footer-socials">
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+        </div>
+      </div>
+      <div class="footer-contact">
+        <p><i class="fa-solid fa-envelope"></i> abikaavyaxerox@gmail.com</p>
+        <p><i class="fa-solid fa-phone"></i> 9940764177</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  <!-- Responsive Google Map Embed -->
+  <div class="responsive-map">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3910.4406964959594!2d78.21603079391447!3d11.448083377690846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babc1ec70f7f859%3A0x6180a496377bd9a8!2z4K6u4K-B4K6k4K-N4K6k4K6-4K6v4K6u4K-N4K6u4K6-4K6z4K-NIOCuruCvhuCuruCvi-CusOCuv-Cur-CusuCvjSDgrpXgrr7grrLgr4fgrpzgr40g4K6G4K6q4K-NIOCuhuCusOCvjeCun-CvjeCuuOCvjSDgroXgrqPgr43grp_gr40g4K6a4K6v4K6_4K6p4K-N4K644K-N!5e0!3m2!1sta!2sin!4v1753254994455!5m2!1sta!2sin"
+      width="100" height="100" style="border:0;"  loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    function showNavbar() { document.getElementById('sideNavbar').style.display = 'block'; }
+    function closeNavbar() { document.getElementById('sideNavbar').style.display = 'none'; }
+  </script>
+</body>
+
+</html>
+

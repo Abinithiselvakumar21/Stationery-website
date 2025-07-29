@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Order Confirmation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body{font-family:Arial;text-align:center;padding:2rem}
+    h1{color:#4caf50;margin-bottom:0}
+    p{margin:.5rem 0}
+    table{width:100%;max-width:650px;margin:1.5rem auto;border-collapse:collapse}
+    th,td{border:1px solid #ddd;padding:8px}
+    th{background:#f2f2f2}
+    td img{width:60px;height:auto;border-radius:4px}
+    .btn{display:inline-block;margin-top:2rem;background:#00bcd4;color:#fff;border:0;padding:10px 20px;border-radius:5px;text-decoration:none}
+    @media(max-width:480px){td img{width:45px}}
+  </style>
+  <!-- ✅ Confetti Library -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+
+  <!-- ✅ EmailJS SDK -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+  (function() {
+    emailjs.init("WPgpxgmVh_o0HnElN"); // Replace with your public key
+  })();
+</script>
+
+</head>
+<body>
+  <h1>✅ Order Placed!</h1>
+  <div id="details"></div>
+
+  <a href="collection.html" class="btn">Back to Products</a>
+
+  <script>
+    const holder = document.getElementById("details");
+    const order = JSON.parse(localStorage.getItem("lastOrder") || "null");
+
+    if(!order){
+      holder.innerHTML = "<p>No order data found.</p>";
+    }else{
+      const when = new Date(order.ts).toLocaleString();
+      let html = `<p><strong>Date:</strong> ${when}</p>`;
+      html += `<table>
+                 <tr><th>Image</th><th>Price (₹)</th></tr>`;
+      order.items.forEach(item=>{
+        const price = parseFloat((item.price+"").replace(/[^\d.-]/g,""))||0;
+        html += `<tr>
+                   <td><img src="${item.img}" alt="${item.name}"></td>
+                   <td>${price.toFixed(2)}</td>
+                 </tr>`;
+      });
+      html += `<tr><th colspan="1">Total</th><th>₹${order.total.toFixed(2)}</th></tr></table>`;
+      holder.innerHTML = html;
+
+      // ✅ Trigger confetti after rendering
+      setTimeout(() => {
+        confetti({
+          particleCount: 150,
+          spread: 100,
+          origin: { y: 0.6 }
+        });
+      }, 300);
+    }
+
+
+    // ✅ Email the order details using EmailJS
+// ✅ Use the correct service ID you just provided:
+console.log("Sending email with service ID: service_d8fr9vh");
+
+emailjs.send("service_d8fr9vh", "template_ri1e7r5", {
+  customer_name: order.name,
+  phone: order.phone,
+  address: order.address,
+  date: when,
+  items: order.items.map(item => 
+    `${item.name} - ₹${parseFloat(item.price).toFixed(2)}<br><img src="${item.img}" width="100">`
+  ).join("<br><br>"),
+  total: order.total.toFixed(2),
+  to_email: "abikaavyastationery@gmail.com"
+})
+.then(() => {
+  console.log("✅ Email sent to shop");
+})
+.catch((error) => {
+  console.error("❌ Email sending failed:", error);
+});
+
+
+
+  </script>
+</body>
+</html>
